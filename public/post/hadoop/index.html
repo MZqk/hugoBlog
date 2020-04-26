@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Hadoop 常见问题 - MZZZ</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="MZZZ" /><meta name="description" content="常见问题及处理 mysql版本，必须是MYSQL5.1。 查询办法mysqladmin version 在建立hive数据库的时候，最好是:create database hive; oo" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.1 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/hadoop/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Hadoop 常见问题" />
+<meta property="og:description" content="常见问题及处理 mysql版本，必须是MYSQL5.1。 查询办法mysqladmin version 在建立hive数据库的时候，最好是:create database hive; oo" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/hadoop/" />
+<meta property="article:published_time" content="2017-06-16T15:40:10+08:00" />
+<meta property="article:modified_time" content="2017-06-16T15:40:10+08:00" />
+<meta itemprop="name" content="Hadoop 常见问题">
+<meta itemprop="description" content="常见问题及处理 mysql版本，必须是MYSQL5.1。 查询办法mysqladmin version 在建立hive数据库的时候，最好是:create database hive; oo">
+<meta itemprop="datePublished" content="2017-06-16T15:40:10&#43;08:00" />
+<meta itemprop="dateModified" content="2017-06-16T15:40:10&#43;08:00" />
+<meta itemprop="wordCount" content="2469">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hadoop 常见问题"/>
+<meta name="twitter:description" content="常见问题及处理 mysql版本，必须是MYSQL5.1。 查询办法mysqladmin version 在建立hive数据库的时候，最好是:create database hive; oo"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">MZZZ</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">MZZZ</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Hadoop 常见问题</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2017-06-16 </span>
+        <div class="post-category">
+            <a href="/categories/other/"> Other </a>
+            </div>
+          <span class="more-meta"> 约 2469 字 </span>
+          <span class="more-meta"> 预计阅读 5 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h1 id="常见问题及处理">常见问题及处理</h1>
+<ol>
+<li><strong>mysql版本，必须是MYSQL5.1。</strong></li>
+</ol>
+<blockquote>
+<p>查询办法mysqladmin version
+在建立hive数据库的时候，最好是:create database hive;
+oozie的数据库，同样：create database oozie;</p>
+</blockquote>
+<ol start="2">
+<li><strong>hadoop采集的字符集问题。</strong></li>
+</ol>
+<blockquote>
+<p>修改/etc/sysconfig/i18n   更改字符集为en_US.UTF-8
+重启机器生效。
+重启机器的指令为：在root下敲入如下指令：sync;sync;init 6</p>
+</blockquote>
+<ol start="3">
+<li><strong>修改mapreduce。</strong></li>
+</ol>
+<blockquote>
+<p>在gateway/性能下修改：MapReduce 子 Java 基础选项 、Map 任务 Java 选项库 、Reduce 任务 Java 选项库 全部配置成  -Xmx4294967296
+在TASKTRACKER/性能下修改:MapReduce 子 Java 基础选项 、Map 任务 Java 选项库 、Reduce 任务 Java 选项库 全部配置成  -Xmx4294967296</p>
+</blockquote>
+<ol start="4">
+<li><strong>必须关注各个任务的详细情况</strong></li>
+</ol>
+<blockquote>
+<p>当出现如下的错误的时候，请及时的将下载的进程数调小。
+vi /home/boco/oozie_wy/config/lte/mro/ftp/807101.xml  将max_thread由原来的6个调整为3个,或者协调厂家加大FTP的最大线程数。
+stderr logs：
+org.apache.commons.net.ftp.FTPConnectionClosedException: FTP response 421 received.  Server closed connection.
+at org.apache.commons.net.ftp.FTP.__getReply(FTP.java:363)
+at org.apache.commons.net.ftp.FTP.__getReply(FTP.java:290)
+at org.apache.commons.net.ftp.FTP.<em>connectAction</em>(FTP.java:396)
+at org.apache.commons.net.ftp.FTPClient.<em>connectAction</em>(FTPClient.java:796)
+at org.apache.commons.net.SocketClient.connect(SocketClient.java:172)
+at org.apache.commons.net.SocketClient.connect(SocketClient.java:192)
+at org.apache.commons.net.SocketClient.connect(SocketClient.java:285)
+at com.boco.wangyou.utils.Ftp.connectServer(Ftp.java:550)
+at com.boco.wangyou.lte.mro.ftp.tools.FindFileThread.run(FindFileThread.java:67)
+登录ftp服务器【10.140.177.149】失败，FTP服务器无法打开！
+org.apache.commons.net.ftp.FTPConnectionClosedException: FTP response 421 received.  Server closed connection.
+at org.apache.commons.net.ftp.FTP.__getReply(FTP.java:363)
+at org.apache.commons.net.ftp.FTP.__getReply(FTP.java:290)
+at org.apache.commons.net.ftp.FTP.<em>connectAction</em>(FTP.java:396)
+at org.apache.commons.net.ftp.FTPClient.<em>connectAction</em>(FTPClient.java:796)
+at org.apache.commons.net.SocketClient.connect(SocketClient.java:172)
+at org.apache.commons.net.SocketClient.connect(SocketClient.java:192)
+at org.apache.commons.net.SocketClient.connect(SocketClient.java:285)
+at com.boco.wangyou.utils.Ftp.connectServer(Ftp.java:550)
+at com.boco.wangyou.lte.mro.ftp.tools.FindFileThread.run(FindFileThread.java:67)
+登录ftp服务器【10.140.177.149】失败，FTP服务器无法打开！
+org.apache.commons.net.ftp.FTPConnectionClosedException: FTP response 421 received.  Server closed connection.
+at org.apache.commons.net.ftp.FTP.__getReply(FTP.java:363)
+at org.apache.commons.net.ftp.FTP.__getReply(FTP.java:290)
+at org.apache.commons.net.ftp.FTP.<em>connectAction</em>(FTP.java:396)
+at org.apache.commons.net.ftp.FTPClient.<em>connectAction</em>(FTPClient.java:796)
+at org.apache.commons.net.SocketClient.connect(SocketClient.java:172)
+at org.apache.commons.net.SocketClient.connect(SocketClient.java:192)</p>
+</blockquote>
+<ol start="5">
+<li><strong>TASKTRACKER和HDFS组的问题</strong></li>
+</ol>
+<blockquote>
+<p>发现部分地方在安装的时候，将所有的机器分组的问题。
+如果分组，需要将每个组的参数都要修改。
+目前发现很多的地方，TASKTRACKER和HDFS都分了组，但是只修改一组的参数，造成系统大量出问题。
+java heap size以及tasktracker被拉黑名单的问题。</p>
+</blockquote>
+<ol start="6">
+<li><strong>namenode和datanode的内存配置问题</strong>。</li>
+</ol>
+<blockquote>
+<p>建议将使用的内存修改为4G左右。</p>
+</blockquote>
+<ol start="7">
+<li><strong>建议将HIVE2服务放到一个辅节点上</strong>。</li>
+</ol>
+<blockquote>
+<p>hive2放到辅节点上，经常出现add_partation挂起报错。</p>
+</blockquote>
+<ol start="8">
+<li><strong>解决HIVE经常挂死的问题</strong></li>
+</ol>
+<blockquote>
+<p>修改zookeeper的最大客户端连接数，maxClientCnxns修改为3600或者修改成0不限制
+自动清空时间间隔，autopurge.purgeInterval 修改为1小时</p>
+</blockquote>
+<ol start="9">
+<li><strong>厂家XML配置的问题</strong>。</li>
+</ol>
+<blockquote>
+<p>如果厂家是这样的：/data/dataservice/mr/ltemro/huawei/20140815/01/362323/TD-LTE_MRO_HUAWEI_010133150144_362323_20140815011500.xml.gz
+建议配置成这样的：
+路径：/data/dataservice/mr/ltemro/huawei/$TIME$/$ENODEB$
+时间格式：yymmdd/hh</p>
+</blockquote>
+<ol start="10">
+<li><strong>在/home/boco/oozie_wy/config/lte/mro/ftp下禁止存放.bak文件</strong></li>
+</ol>
+<blockquote>
+<p>有一个省份的mapper数超多，导致解析很长时间没有完成。
+进一步发现FTP在合并文件的时候报错，再进一步发现同一个IP地址，同一个OMC启动了三个mapper进程去下载数据导致文件合并失败。
+发现是修改了ftp.xml文件，没有删除原来的文件，而是以一个bak文件存放。
+删除这些bak文件，mapper数量正常。
+原mapper数1731个，删除之后mapper数41个,采集正常。
+打开50030看FTP的日志，存在如下的报错：
+java.io.FileNotFoundException: File does not exist: /user/boco/cache/wy/ltemro/1411032293348/xml/155/2014-09-18_11/TD-LTE_MRO_ERICSSON_OMC1_303024_20140918111500.xml.zip
+at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:39)
+at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocationsUpdateTimes(FSNamesystem.java:1341)
+at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocationsInt(FSNamesystem.java:1293)
+at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:1269)
+at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:1242)
+at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.getBlockLocations(NameNodeRpcServer.java:392)
+at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.getBlockLocations(ClientNamenodeProtocolServerSideTranslatorPB.java:172)
+at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java:44938)
+at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:453)
+at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:1002)
+at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:1701)
+at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:1697)
+at java.security.AccessController.doPrivileged(Native Method)
+或者：
+org.apache.hadoop.ipc.RemoteException(org.apache.hadoop.hdfs.server.namenode.LeaseExpiredException): Lease mismatch on /user/boco/cache/wy/ltemro/1411032293348/xml/155/2014-09-18_11/TD-LTE_MRO_ERICSSON_OMC1_3030_20140918.xml owned by DFSClient_NONMAPREDUCE_-1274827212_1 but is accessed by DFSClient_NONMAPREDUCE_-216613905_1
+at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.checkLease(FSNamesystem.java:2459)
+at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.checkLease(FSNamesystem.java:2437)
+at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.completeFileInternal(FSNamesystem.java:2503)
+at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.completeFile(FSNamesystem.java:2480)
+at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.complete(NameNodeRpcServer.java:535)
+at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.complete(ClientNamenodeProtocolServerSideTranslatorPB.java:337)
+at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java:44958)
+at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:453)
+at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:1002)</p>
+</blockquote>
+<ol start="11">
+<li><strong>REDIS故障</strong></li>
+</ol>
+<blockquote>
+<p>解析时候报错，错误如下：
+redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+at redis.clients.util.Pool.getResource(Pool.java:22)
+at com.boco.wangyou.utils.JedisUtils.getJedis(JedisUtils.java:47)
+at com.boco.wangyou.utils.JedisUtils.getTableValues(JedisUtils.java:119)
+at com.boco.wangyou.lte.mro.tdl.tools.LteMroXMLParser.<!-- raw HTML omitted -->(LteMroXMLParser.java:82)
+at com.boco.wangyou.lte.mro.tdl.XMLParseMapper.map(XMLParseMapper.java:44)
+at com.boco.wangyou.lte.mro.tdl.XMLParseMapper.map(XMLParseMapper.java:18)
+at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:140)</p>
+</blockquote>
+<pre><code>此问题一般是因为REDIS没有启动导致。
+</code></pre>
+<ol start="12">
+<li><strong>克隆机器安装的问题</strong></li>
+</ol>
+<blockquote>
+<p>把一个节点的第二步都装好了，把它克隆到其它主机上，再把克隆到的主机的IP
+（注意在修改IP配置文件的时候，将HWaddr也改了，一般是这种格式：00:50:56:80:4E:D6，
+否则在连接时会找不到硬盘）和主机名改下。
+此种情况主要出现在使用vmvare vsphere克隆导致的。
+注意：
+克隆之后的机器要修改IP地址，主机名，MAC地址。</p>
+</blockquote>
+<ol start="13">
+<li><strong>redis挂死，导致无法采集</strong></li>
+</ol>
+<blockquote>
+<p>#现象
+#redis.clients.jedis.exceptions.JedisDataException:
+MISCONF Redis is configured to save RDB snapshots,
+but is currently not able to persist on disk.
+#启动客户端：
+/usr/local/redis/redis-cli
+#输入：
+config set stop-writes-on-bgsave-error no</p>
+</blockquote>
+<ol start="14">
+<li><strong>主节点7180无法访问</strong></li>
+</ol>
+<blockquote>
+<p>1）检查主节点是不是日志空间满了，如果满了，需要删除/var/log/hive下面日志
+2）删除浏览器的cookie访问记录
+hadoop相关服务启动命令：
+sudo service cloudera-scm-server stop
+sudo service cloudera-scm-server-db stop
+sudo service cloudera-scm-server start
+sudo service cloudera-scm-server-db start</p>
+</blockquote>
+<ol start="15">
+<li><strong>LTEMRO采集报错</strong></li>
+</ol>
+<blockquote>
+<p>主要是在这一步报错：CREATE_EXTERNAL_TABLE_NODE
+有效的采样点数据，是如下的八个字段必须有值：
+MR.LteScEarfcn        主小区频点
+MR.LteScPci           主小区PCI
+MR.LteScRSRP          主小区的RSRP
+MR.LteScRSRQ          主小区RSRQ
+MR.LteNcEarfcn        邻小区频点
+MR.LteNcPci           邻小区PCI
+MR.LteNcRSRP          邻小区的RSRP
+MR.LteNcRSRQ          邻小区RSRQ</p>
+</blockquote>
+<pre><code>只要有有效数据，就不会报这个错。
+</code></pre>
+<ol start="16">
+<li><strong>查看日志</strong></li>
+</ol>
+<blockquote>
+<p>HIVE的日志主要是在:/var/log/hive/
+oozie的日志主要在: /var/log/oozie/
+HDFS的日志主要在: /var/log/hadoop-hdfs/
+zookeeper的日志主要在:/var/log/zookeeper/
+在出现问题的时候，可以看看这些日志。</p>
+</blockquote>
+<ol start="17">
+<li><strong>zookeeper无法启动</strong>。</li>
+</ol>
+<blockquote>
+<p>报错如下：
+处理办法：到master主机的/var/lib/zookeeper，删除所有的文件，重启zookeeper即可。
+sudo mkdir version-2
+sudo chown  -R zookeeper:zookeeper version-2</p>
+</blockquote>
+<ol start="18">
+<li><strong>loudera-manager-installer.bin安装报错</strong>。</li>
+</ol>
+<blockquote>
+<p>报错如下：
+Loaded plugins: aliases, changelog, downloadonly, fastestmirror, kabi, presto,
+: refresh-packagekit, security, tmprepo, verify, versionlock
+Loading support for CentOS kernel ABI
+Loading mirror speeds from cached hostfile
+http://10.233.9.63/cdh4.3.0/cdh4.3/repodata/repomd.xml: [Errno 14] PYCURL ERROR 22 - &ldquo;The requested URL returned error: 403&rdquo;
+Trying other mirror.
+Error: Cannot retrieve repository metadata (repomd.xml) for repository: cloudera-cdh4. Please verify its path and try again
+处理办法：
+删除集群中每一台机器上原有的repo文件，rm -rf /etc/yum.repos.d/*
+然后修改cloudera-chd4.repo、cloudera-impala.repo和	cloudera-manager.repo文件，将文件中的地址换成主节点的地址。
+将cloudera-chd4.repo、cloudera-impala.repo和	cloudera-manager.repo文件上传到集群中每一台机器的/etc/yum.repos.d/目录下。</p>
+</blockquote>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">MZZZ</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2017-06-16
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/mount_hadoop/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">安装 Hadoop</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/markdown/">
+            <span class="next-text nav-default">Markdown 基础使用</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2014 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">MZZZ</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.cddea96674a99fd8cea50d36fb19d9c91f497feea4af5ce4596afd2dbaab9202.js"></script>
+
+
+
+<script id="baidu_push">
+  (function(){
+    if (window.location.hostname === 'localhost') return;
+    var bp = document.createElement('script'); bp.async = true;
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  })();
+</script>
+
+
+
+
+</body>
+</html>
