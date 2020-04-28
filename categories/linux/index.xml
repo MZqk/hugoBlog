@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on MZZZ</title>
+    <link>http://localhost:1313/categories/linux/</link>
+    <description>Recent content in Linux on MZZZ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 22 Jul 2017 16:39:30 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>FHS</title>
+      <link>http://localhost:1313/post/fhs/</link>
+      <pubDate>Sat, 22 Jul 2017 16:39:30 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/fhs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux 常用 shell 命令</title>
+      <link>http://localhost:1313/post/linux_shell/</link>
+      <pubDate>Sun, 25 Jun 2017 16:38:47 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/linux_shell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vim 基础使用</title>
+      <link>http://localhost:1313/post/vim_keyboard/</link>
+      <pubDate>Sun, 18 Jun 2017 16:37:08 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/vim_keyboard/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shell 教程基础教程</title>
+      <link>http://localhost:1313/post/shell_script/</link>
+      <pubDate>Sat, 17 Jun 2017 16:35:08 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/shell_script/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux 常用命令</title>
+      <link>http://localhost:1313/post/linux_command/</link>
+      <pubDate>Sat, 17 Jun 2017 16:33:59 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/linux_command/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vim 自定插件</title>
+      <link>http://localhost:1313/post/vimconfig/</link>
+      <pubDate>Wed, 14 Jun 2017 15:35:31 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/vimconfig/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>我的 Bash 配置</title>
+      <link>http://localhost:1313/post/bashrc/</link>
+      <pubDate>Wed, 14 Jun 2017 15:32:53 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/bashrc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux管理用户</title>
+      <link>http://localhost:1313/post/linux_user/</link>
+      <pubDate>Wed, 14 Jun 2017 15:30:55 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/linux_user/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

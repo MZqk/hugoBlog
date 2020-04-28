@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Linux 常用 shell 命令 - MZZZ</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="MZZZ" /><meta name="description" content="" />
+
+
+<meta name="baidu-site-verification" content="ffpGMEgJqL" />
+<meta name="google-site-verification" content="000787356434342490116:pqinoduyuiu" />
+
+
+<meta name="generator" content="Hugo 0.69.1 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/linux_shell/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Linux 常用 shell 命令" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/linux_shell/" />
+<meta property="article:published_time" content="2017-06-25T16:38:47+08:00" />
+<meta property="article:modified_time" content="2020-04-26T16:38:47+08:00" />
+<meta itemprop="name" content="Linux 常用 shell 命令">
+<meta itemprop="description" content="">
+<meta itemprop="datePublished" content="2017-06-25T16:38:47&#43;08:00" />
+<meta itemprop="dateModified" content="2020-04-26T16:38:47&#43;08:00" />
+<meta itemprop="wordCount" content="1580">
+
+
+
+<meta itemprop="keywords" content="shell," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Linux 常用 shell 命令"/>
+<meta name="twitter:description" content=""/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">MZZZ</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/search/">
+        <li class="mobile-menu-item">搜索</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">MZZZ</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/search/">搜索</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Linux 常用 shell 命令</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2017-06-25 </span>
+        <div class="post-category">
+            <a href="/categories/linux/"> Linux </a>
+            </div>
+          <span class="more-meta"> 约 1580 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+    <div class="post-content">
+      <blockquote>
+<p>ls -d $(echo ${PATH//:/ }) &gt; /dev/null 显示PATH中失效的目录 ​​​​</p>
+</blockquote>
+<blockquote>
+<p>awk -F &lsquo;,&rsquo; &lsquo;{ x = x + $4 } END { print x }&rsquo; test.csv 从CSV中计算列的总数</p>
+</blockquote>
+<blockquote>
+<p>diff &lt;(wget -q -O - URL1) &lt;(wget -q -O - URL2) 比较两个远程的网页 ​​​​</p>
+</blockquote>
+<blockquote>
+<p>:r! echo % 在vim中插入当前文件名</p>
+</blockquote>
+<blockquote>
+<p>cat file | tee &raquo; file 把文件内容贴到他自己的尾巴上(直接cat 不可以)</p>
+</blockquote>
+<blockquote>
+<p>for ARG in * ; do sudo -u USER 7z x -o&quot;$(echo $ARG|sed &lsquo;s/(.<em>)..</em>/\1/')&rdquo;
+&ldquo;$ARG&rdquo; ; done 解压当前目录下的所有的压缩文件，各个压缩文件都解压在自己的目录中</p>
+</blockquote>
+<blockquote>
+<p>ssh user@remote-host &ldquo;DISPLAY=:0.0 import -window root -format png -&ldquo;|display
+-format png - 远程截屏</p>
+</blockquote>
+<blockquote>
+<p>date &ndash;date=yesterday +%Y%m%d 格式化另一个日期 ​​​​</p>
+</blockquote>
+<blockquote>
+<p>history &gt; ~/history-save-$(date +%d-%m-%y-%T) 备份命令历史</p>
+</blockquote>
+<blockquote>
+<p>for i in &ldquo;*.txt&rdquo;; do tar -c -v -z -f $i.tar.gz &ldquo;$i&rdquo; &amp;&amp; rm -v &ldquo;$i&rdquo;; done 压缩所有的txt</p>
+</blockquote>
+<blockquote>
+<p>cat file.txt | sendmail -F myname -f <a href="mailto:admin@mysite.com">admin@mysite.com</a> <a href="mailto:guest@guest.com">guest@guest.com</a> 命令行发邮件</p>
+</blockquote>
+<blockquote>
+<p>rm $( ls | egrep -v &lsquo;abc|\s&rsquo; ) 删除除了叫abc的文件 ​​​​</p>
+</blockquote>
+<blockquote>
+<p>find /path/ -type f -exec grep -l &lsquo;<!-- raw HTML omitted -->&rsquo; {} ; | xargs sed -i -e &lsquo;s%<!-- raw HTML omitted -->%<!-- raw HTML omitted -->%g&rsquo; 查找并替换 ​​​​</p>
+</blockquote>
+<blockquote>
+<p>sleep 3s &amp;&amp; espeak &ldquo;wake up, you bastard&rdquo; 2&gt;/dev/null 计时器的实现</p>
+</blockquote>
+<blockquote>
+<p>tar tfz filename.tgz |xargs rm -Rf 撤销解压tar的方法 ​​​​</p>
+</blockquote>
+<blockquote>
+<p>awk &lsquo;BEGIN{IGNORECASE=1;FS=&quot;<!-- raw HTML omitted -->|<!-- raw HTML omitted -->&rdquo;;RS=EOF} {print $2}&rsquo; file.html 获取html文件中title名字 ​​​​</p>
+</blockquote>
+<blockquote>
+<p>truncate -s 1M file 创建特定大小的文件 ​​​​</p>
+</blockquote>
+<blockquote>
+<p>ls -I &ldquo;*.gz&rdquo; 反向ls (ls 除了 *.gz) ​​​​</p>
+</blockquote>
+<blockquote>
+<p>setenforce 0 关闭 SE Linux ​​​​</p>
+</blockquote>
+<blockquote>
+<p>cat video.avi.001 video.avi.002 video.avi.003 &raquo; video.avi 合并小电影 ​​​​</p>
+</blockquote>
+<blockquote>
+<p>find -printf &lsquo;%u %g\n&rsquo; | sort | uniq 获取当前目录的文件权限列表 ​​​​</p>
+</blockquote>
+<blockquote>
+<p>cat .ssh/id_dsa.pub | ssh elsewhere &ldquo;[ -d .ssh ] || mkdir .ssh ; cat &raquo; .ssh/authorized_keys&rdquo; 妈妈再也不用担心我忘了ssh密码 ​​​​</p>
+</blockquote>
+<blockquote>
+<p>git svn &ndash;authors-file=some-authors-file clone svn://address/of/svn/repo new-git-dir 导入/克隆一个svn仓库到git仓库 ​​​​</p>
+</blockquote>
+<blockquote>
+<p>find ~/Desktop/ ( -regex &lsquo;.<em>/..</em>&rsquo; ) -print -exec rm -Rf {} ; 查找删除隐藏文件 ​​​​</p>
+</blockquote>
+<blockquote>
+<p>cat ~/.viminfo  | sed -n &lsquo;/^:[0-9]+,([0-9]+|$)s/p&rsquo; 看看今天vim中使用了多少regex ​​​​</p>
+</blockquote>
+<blockquote>
+<p>echo -n &ldquo;string&rdquo; | md5sum - 生成md5 ​​​​</p>
+</blockquote>
+<blockquote>
+<p>free -m | awk &lsquo;/Swap/ {print $4}&rsquo; 释放swap</p>
+</blockquote>
+<blockquote>
+<p>cp -p <code>ls -l | awk '/Apr 14/ {print $NF}'</code> /usr/users/backup_dir 查找特定时间戳的文件 ​​​​</p>
+</blockquote>
+<blockquote>
+<p>convert *.jpg File_Output.pdf 合并jpg为pdf</p>
+</blockquote>
+<blockquote>
+<p>zmv &lsquo;(<em>.</em>)(.*)&rsquo; &lsquo;${1//./_}$2&rsquo; 将文件名中的 . 替换成 _</p>
+</blockquote>
+<blockquote>
+<p>ls -1 /lib/modules 列出安装的 kernels ​​​​</p>
+</blockquote>
+<blockquote>
+<p>find . -type f -name filename.exe -exec sed -i &ldquo;s/oldstring/oldstring/g&rdquo; {} +; 在任何跟&rsquo;filename.exe&rsquo;同名的文件中查找并替换目标字符串。</p>
+</blockquote>
+<blockquote>
+<p>rm !(<em>.foo|</em>.bar|*.baz) Delete all files in a folder that don&rsquo;t match a
+certain file extension
+删除一个目录下所有不匹配特定扩展名的文件 ​​​​</p>
+</blockquote>
+<blockquote>
+<p>ssh user@remote &ldquo;tar cfp - /path/to/log/* | gzip&rdquo; &gt; local.tar.gz 远程压缩后写到本地 ​​​​</p>
+</blockquote>
+<blockquote>
+<p>find . -mmin -60 -not -path &ldquo;<em>svn</em>&rdquo; -print|more 忽略SVN文件和文件夹，递归查找最近一小时内修改过的文件 ​​​​</p>
+</blockquote>
+<blockquote>
+<p>apt-cache show pkgname | grep -i &ldquo;version:&rdquo; 查看包版本 ​​​​</p>
+</blockquote>
+<blockquote>
+<p>du -s * | sort -nr | head 寻找大文件 ​​​​</p>
+</blockquote>
+<blockquote>
+<p>lsof | grep pcm 列出正在播放声音的进程 ​​​​</p>
+</blockquote>
+<blockquote>
+<p>grep &lsquo;model|MHz&rsquo; /proc/cpuinfo  |tail -n 2 查看cpu型号 ​​​​</p>
+</blockquote>
+<blockquote>
+<p>export var1=<code>ps -A | grep '[u]nique' | cut -d '?' -f 1</code>; echo${var1/ /}; kill -9 $var1 在无法使用pidof和pgrep的情况下，杀死PID未知的进程</p>
+</blockquote>
+<blockquote>
+<p>nocomments () { cat $1 | egrep -v &lsquo;^[[:space:]]*#|^[[:space:]]<em>$|^[[:space:]]</em>;&rsquo; | sed &lsquo;/<!-- raw HTML omitted -->/d&rsquo; | sed &lsquo;/<!-- raw HTML omitted -->/d&rsquo;; } 去掉注释 ​​​​</p>
+</blockquote>
+<blockquote>
+<p>while true ; do  sleep 1 ; clear ;  (netstat -tn | grep -P &lsquo;:36089\s+\d&rsquo;) ;  done 监控端口连接 ​​​​</p>
+</blockquote>
+<blockquote>
+<p>find . -maxdepth 1 -empty -delete 清理大小为0的文件 ​​​​</p>
+</blockquote>
+<blockquote>
+<p>while [ /bin/true ]; do OLD=$NEW; NEW=<code>cat /proc/net/dev | grep eth0 | tr -s ' ' | cut -d' ' -f &quot;3 11&quot;</code>; echo $NEW $OLD | awk &lsquo;{printf(&quot;\rin 监控 RT/TX ​​​​</p>
+</blockquote>
+<blockquote>
+<p>for i in *.xml; do sed -i &lsquo;s/foo/bar/g&rsquo; &ldquo;$i&rdquo;; done 批量替换xml中关键字</p>
+</blockquote>
+<blockquote>
+<p>sed -n &lsquo;/^.{255}/!p&rsquo; 清除多余255个字符的行</p>
+</blockquote>
+<blockquote>
+<p>rar a -m0 &ldquo;${PWD##*/}.rar&rdquo; * 自动命名创建rar的包 ​​​​</p>
+</blockquote>
+<blockquote>
+<p>read -sn 1 -p &ldquo;Press any key to continue&hellip;&rdquo; Shell版 Press Any Key to Continue</p>
+</blockquote>
+<blockquote>
+<p>for count in $(seq 2 1001); do say &ldquo;$count sheeps&rdquo;;sleep 2;done 催眠</p>
+</blockquote>
+<blockquote>
+<p>lftp -u&laquo;credentials&raquo; &laquo;server&raquo; -e &ldquo;du -a;exit&rdquo; &gt; server-listing.txt 获取ftp的目录结构 ​​​​</p>
+</blockquote>
+<blockquote>
+<p>for i in $(find . -mtime +30); do mv $i old/; done 移动30天前的文件到old文件夹</p>
+</blockquote>
+<blockquote>
+<p>( ( sleep 2h; your-command your-args ) &amp; ) 在后台2个小时后运行一个命令</p>
+</blockquote>
+<blockquote>
+<p>grep ^[^#] /etc/file.conf 清理文件中的注释</p>
+</blockquote>
+<blockquote>
+<p>cat /dev/urandom | tr -dc A-Za-z0-9 | head -c 32 长密码</p>
+</blockquote>
+<blockquote>
+<p>while $t; do for i in <code>seq 1 30</code>;do r=&quot;$[($RANDOM % 2)]&quot;;h=&quot;$[($RANDOM % 4)]&quot;;if [ $h -eq 1 ]; then v=&rdquo;\e[1m $r&rdquo;;else v=&rdquo;\e[2m $r&rdquo;;fi;v2=&quot;$v2 $v&rdquo;;done;echo -e $v2;v2=&rdquo;&quot;;done; 黑客帝国 ​​​​</p>
+</blockquote>
+<blockquote>
+<p>echo $(( $RANDOM % 10 + 1 )) 生成 1 到 10 的随机数 ​​​​
+​​​​
+function gbl() { git for-each-ref &ndash;sort=-committerdate &ndash;format=&rsquo;%(committerdate) %(authorname) %(refname)&rsquo; refs/remotes/origin/|grep -e &ldquo;.$@&ldquo;|head -n 10; } 按作者列出git远程分支</p>
+</blockquote>
+<blockquote>
+<p>ruby -e &ldquo;i=0;loop{puts ' &lsquo;<em>(29</em>(Math.sin(i)/2+1))+'|&rsquo;<em>(29</em>(Math.cos(i)/2+1)); i+=0.1}&rdquo; 显示一个波形图案 ​​​​</p>
+</blockquote>
+<blockquote>
+<p>awk -F&rdquo;:&rdquo; &lsquo;{ print $1 }&rsquo; /etc/passwd | while read UU ; do STATUS=$(passwd -S ${UU} | grep locked 2&gt;/dev/null) ; if [[ ! -z ${STATUS} ]] ; then echo &ldquo;Account ${UU} is locked.&rdquo; ; fi ; done 查找某些特定帐户是否被锁住 ​​​​</p>
+</blockquote>
+<blockquote>
+<p>man -t ls &gt; ls.ps &amp;&amp; pdf2ps ls.ps &amp;&amp; rm ls.ps 将man文档输出为pdf格式 ​​​​</p>
+</blockquote>
+<blockquote>
+<p>ls * | sed -e &lsquo;p;s/foo/bar/&rsquo; | xargs -n2 mv 用sed批量重命名文件 ​​​​</p>
+</blockquote>
+<blockquote>
+<p>echo $(shuf -i 1-35 | head -n7 | sort -n) 帮你卖双色球(35选7) ​​​​</p>
+</blockquote>
+<blockquote>
+<p>find . -type d | sed -e &ldquo;s/[^-][^/]*//  |/g&rdquo; -e &ldquo;s/|([^ ])/|-\1/&rdquo; 目录树 ​​​​
+​​​​
+echo -e &ldquo;\e[3$(( $RANDOM * 6 / 32767 + 1 ))mHello World!&rdquo; 随机颜色的字</p>
+</blockquote>
+<blockquote>
+<p>nc -zw2 <a href="http://www.example.com">www.example.com</a> 80 &amp;&amp; echo open 查看tcp端口是不是打开了 ​​​​</p>
+</blockquote>
+<blockquote>
+<p>myrm(){ D=/tmp/$(date +%Y%m%d%H%M%S); mkdir -p $D; mv &ldquo;$@&rdquo; $D &amp;&amp; echo &ldquo;moved to $D ok&rdquo;; }  建立删除回收机制</p>
+</blockquote>
+<blockquote>
+<p>UNIX2dos [-kn] oldfile newfile  转换为Linux格式</p>
+</blockquote>
+<blockquote>
+<p>perl -e &ldquo;use POSIX qw(strftime); print strftime &lsquo;%Y%m%d&rsquo; , localtime( time()-3600<em>24</em>30) &quot;  perl获取时间</p>
+</blockquote>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">MZZZ</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2020-04-26
+        
+    </span>
+  </p>
+  <p class="copyright-item">
+      <span class="item-title">原始文档</span>
+      <span class="item-content"><a class="link-to-markdown" href="http://localhost:1313/post/linux_shell/index.md" target="_blank">查看本文 Markdown 版本 »</a></span>
+    </p>
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/path/to/your/wechat-qr-code.png">
+        <span>微信打赏</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/path/to/your/alipay-qr-code.png">
+        <span>支付宝打赏</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/shell/">shell</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/aixofsvn/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">AIX 安装 SVN</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/vim_keyboard/">
+            <span class="next-text nav-default">Vim 基础使用</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="zqk_mz@163.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/MZqk" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2014 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">MZZZ</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.cddea96674a99fd8cea50d36fb19d9c91f497feea4af5ce4596afd2dbaab9202.js"></script>
+
+
+
+<script id="baidu_push">
+  (function(){
+    if (window.location.hostname === 'localhost') return;
+    var bp = document.createElement('script'); bp.async = true;
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  })();
+</script>
+
+
+
+
+</body>
+</html>

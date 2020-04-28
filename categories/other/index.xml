@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Other on MZZZ</title>
+    <link>http://localhost:1313/categories/other/</link>
+    <description>Recent content in Other on MZZZ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 16 Jun 2017 15:40:10 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/categories/other/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hadoop 常见问题</title>
+      <link>http://localhost:1313/post/hadoop/</link>
+      <pubDate>Fri, 16 Jun 2017 15:40:10 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/hadoop/</guid>
+      <description>常见问题及处理 mysql版本，必须是MYSQL5.1。 查询办法mysqladmin version 在建立hive数据库的时候，最好是:create database hive; oo</description>
+    </item>
+    
+  </channel>
+</rss>
