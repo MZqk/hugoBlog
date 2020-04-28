@@ -260,9 +260,4 @@
     <priority>0.5</priority>
   </url>
   
-  <url>
-    <loc>http://localhost:1313/baidu_verify_ffpgmegjql/</loc>
-    <priority>0</priority>
-  </url>
-  
 </urlset>
