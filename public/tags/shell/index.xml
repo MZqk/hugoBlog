@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>shell on MZZZ</title>
+    <link>https://mzqk.github.io//tags/shell/</link>
+    <description>Recent content in shell on MZZZ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 25 Jun 2017 16:38:47 +0800</lastBuildDate>
+    
+	<atom:link href="https://mzqk.github.io//tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Linux 常用 shell 命令</title>
+      <link>https://mzqk.github.io//post/linux_shell/</link>
+      <pubDate>Sun, 25 Jun 2017 16:38:47 +0800</pubDate>
+      
+      <guid>https://mzqk.github.io//post/linux_shell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shell 教程基础教程</title>
+      <link>https://mzqk.github.io//post/shell_script/</link>
+      <pubDate>Sat, 17 Jun 2017 16:35:08 +0800</pubDate>
+      
+      <guid>https://mzqk.github.io//post/shell_script/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux 常用命令</title>
+      <link>https://mzqk.github.io//post/linux_command/</link>
+      <pubDate>Sat, 17 Jun 2017 16:33:59 +0800</pubDate>
+      
+      <guid>https://mzqk.github.io//post/linux_command/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>我的 Bash 配置</title>
+      <link>https://mzqk.github.io//post/bashrc/</link>
+      <pubDate>Wed, 14 Jun 2017 15:32:53 +0800</pubDate>
+      
+      <guid>https://mzqk.github.io//post/bashrc/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
