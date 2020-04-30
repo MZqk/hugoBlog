@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on MZZZ</title>
+    <link>https://mzqk.github.io/tags/python/</link>
+    <description>Recent content in Python on MZZZ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 14 Jul 2017 16:32:59 +0800</lastBuildDate>
+    
+	<atom:link href="https://mzqk.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python 基础知识</title>
+      <link>https://mzqk.github.io/post/learningpython/</link>
+      <pubDate>Fri, 14 Jul 2017 16:32:59 +0800</pubDate>
+      
+      <guid>https://mzqk.github.io/post/learningpython/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

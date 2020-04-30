@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>系统管理 on MZZZ</title>
+    <link>https://mzqk.github.io/tags/%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/</link>
+    <description>Recent content in 系统管理 on MZZZ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 14 Jun 2017 15:30:55 +0800</lastBuildDate>
+    
+	<atom:link href="https://mzqk.github.io/tags/%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Linux管理用户</title>
+      <link>https://mzqk.github.io/post/linux_user/</link>
+      <pubDate>Wed, 14 Jun 2017 15:30:55 +0800</pubDate>
+      
+      <guid>https://mzqk.github.io/post/linux_user/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

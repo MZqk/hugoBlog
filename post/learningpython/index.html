@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Python 基础知识 - MZZZ</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="MZZZ" /><meta name="description" content="" />
+
+
+<meta name="baidu-site-verification" content="ffpGMEgJqL" />
+<meta name="google-site-verification" content="000787356434342490116:pqinoduyuiu" />
+
+
+<meta name="generator" content="Hugo 0.69.2 with theme even" />
+
+
+<link rel="canonical" href="https://mzqk.github.io/post/learningpython/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Python 基础知识" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mzqk.github.io/post/learningpython/" />
+<meta property="article:published_time" content="2017-07-14T16:32:59+08:00" />
+<meta property="article:modified_time" content="2020-04-26T16:32:59+08:00" />
+<meta itemprop="name" content="Python 基础知识">
+<meta itemprop="description" content="">
+<meta itemprop="datePublished" content="2017-07-14T16:32:59&#43;08:00" />
+<meta itemprop="dateModified" content="2020-04-26T16:32:59&#43;08:00" />
+<meta itemprop="wordCount" content="2507">
+
+
+
+<meta itemprop="keywords" content="Python," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python 基础知识"/>
+<meta name="twitter:description" content=""/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">MZZZ</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/search/">
+        <li class="mobile-menu-item">搜索</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">MZZZ</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/search/">搜索</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Python 基础知识</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2017-07-14 </span>
+        <div class="post-category">
+            <a href="/categories/%E6%95%99%E7%A8%8B/"> 教程 </a>
+            </div>
+          <span class="more-meta"> 约 2507 字 </span>
+          <span class="more-meta"> 预计阅读 6 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#数据结构">数据结构</a>
+      <ul>
+        <li></li>
+        <li><a href="#特性">特性</a></li>
+        <li><a href="#生成器">生成器</a></li>
+        <li><a href="#迭代器">迭代器</a></li>
+      </ul>
+    </li>
+    <li><a href="#控制流程">控制流程</a>
+      <ul>
+        <li><a href="#if">if</a></li>
+        <li><a href="#for">for</a></li>
+        <li><a href="#while">while</a></li>
+        <li><a href="#breakcontinue和else">break、continue和else</a></li>
+        <li><a href="#pass">pass</a></li>
+      </ul>
+    </li>
+    <li><a href="#函数">函数</a>
+      <ul>
+        <li><a href="#内建函数">内建函数</a></li>
+        <li><a href="#定义函数">定义函数</a></li>
+        <li><a href="#装饰器">装饰器</a></li>
+        <li><a href="#递归函数">递归函数</a></li>
+        <li><a href="#匿名函数">匿名函数</a></li>
+        <li><a href="#装饰器-1">装饰器</a></li>
+      </ul>
+    </li>
+    <li><a href="#错误和异常">错误和异常</a>
+      <ul>
+        <li><a href="#错误">错误</a></li>
+        <li><a href="#异常">异常</a></li>
+        <li><a href="#异常处理">异常处理</a></li>
+        <li><a href="#抛出异常">抛出异常</a></li>
+        <li><a href="#自定义异常">自定义异常</a></li>
+        <li><a href="#异常清理行为">异常清理行为</a></li>
+      </ul>
+    </li>
+    <li><a href="#类">类</a></li>
+    <li><a href="#附录">附录</a>
+      <ul>
+        <li><a href="#编码风格">编码风格</a></li>
+        <li><a href="#命名规则">命名规则</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p><strong>本文仅为粗略地概括python编程的基本语法，若你有C二级的水平将可以轻易看懂。作为引导很容易了解到python基础，详细的最好能通过<a href="http://python.usyiyi.cn/translate/python_352/contents.html">官方文档</a>学习。</strong></p>
+<h1 id="python">Python</h1>
+<p>源程序编码
+除去第一行需要添加运行环境#!/usr/local/bin/python2还需要说明编码方式以使程序能够识别中文输出</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># -*- coding: utf-8 -*-</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="数据结构">数据结构</h2>
+<p><em>python的数据类型不需要像C一样特别声明</em>
+布尔值
+<em>True</em>
+<em>False</em></p>
+<blockquote>
+<p>支持and、or和not运算</p>
+</blockquote>
+<h4 id="常量">常量</h4>
+<p>常量常用全部大写指明，python的优雅在于有规定语法但却没有强制约束，你仍可以对常量做改变</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">PI = 3.14159265359
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="列表">列表</h4>
+<p>list是一种有序的集合，可以随时添加和删除其中的元素。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">list = [a,b,c,d]
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="元组">元组</h4>
+<p>tuple和list非常类似，但是tuple一旦初始化就不能修改</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">tupe = (&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;b&#39;)
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="集合">集合</h4>
+<p>set和dict类似，也是一组key的集合，但不存储value。由于key不能重复，所以，在set中，没有重复的key。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">set = {&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;}
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="字典">字典</h4>
+<p>dict全称dictionary，在其他语言中也称为map，使用键-值（key-value）存储，具有极快的查找速度。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">dict = {&#39;a&#39;:1,&#39;b&#39;:2,&#39;c&#39;:3,&#39;d&#39;:4 }
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="特性">特性</h3>
+<h4 id="切片">切片</h4>
+<p>取一个list或tuple的部分元素是非常常见的操作</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">L</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+<span class="p">[</span><span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">L</span><span class="p">[</span><span class="mi">2</span><span class="p">]]</span>
+<span class="n">L</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
+<span class="n">L</span><span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">:]</span>
+<span class="n">L</span><span class="p">[</span><span class="mi">10</span><span class="p">:</span><span class="mi">20</span><span class="p">]</span>
+<span class="n">L</span><span class="p">[:</span><span class="mi">10</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">L</span><span class="p">[::</span><span class="mi">5</span><span class="p">]</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>[0,1,2]</p>
+<p>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</p>
+<p>[90, 91, 92, 93, 94, 95, 96, 97, 98, 99]</p>
+<p>[10, 11, 12, 13, 14, 15, 16, 17, 18, 19]</p>
+<p>[0, 2, 4, 6, 8]</p>
+<p>[0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95]</p>
+</blockquote>
+<h4 id="迭代">迭代</h4>
+<p>如果给定一个list或tuple，我们可以通过for循环来遍历这个list或tuple，这种遍历我们称为迭代（Iteration）。</p>
+<p>因为dict的存储不是按照list的方式顺序排列，所以，迭代出的结果顺序很可能不一样。默认情况下，dict迭代的是key</p>
+<h4 id="列表生成器">列表生成器</h4>
+<p>列表生成式即ListComprehensions，是Python内置的非常简单却强大的可以用来创建list的生成式。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="p">[</span><span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)]</span>
+<span class="p">[</span><span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+<span class="p">[</span><span class="n">m</span> <span class="o">+</span> <span class="n">n</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="s1">&#39;ABC&#39;</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="s1">&#39;XYZ&#39;</span><span class="p">]</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]</p>
+<p>[4, 16, 36, 64, 100]</p>
+<p>[&lsquo;AX&rsquo;, &lsquo;AY&rsquo;, &lsquo;AZ&rsquo;, &lsquo;BX&rsquo;, &lsquo;BY&rsquo;, &lsquo;BZ&rsquo;, &lsquo;CX&rsquo;, &lsquo;CY&rsquo;, &lsquo;CZ&rsquo;]</p>
+</blockquote>
+<h3 id="生成器">生成器</h3>
+<p>在Python中，列表在循环的过程中不断推算出后续的元素,这种一边循环一边计算的机制，称为生成器：generator。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">g</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="c1">#通过next()函数可依次调用元素的值</span>
+<span class="c1">#同样可以使用循环的方式迭代出</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="迭代器">迭代器</h3>
+<p>迭代器是一个可以记住遍历的位置的对象。迭代器对象从集合的第一个元素开始访问，直到所有的元素被访问完结束。迭代器只能往前不会后退。</p>
+<h2 id="控制流程">控制流程</h2>
+<h3 id="if">if</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">print</span> <span class="p">(</span><span class="err">小于零</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">print</span> <span class="p">(</span><span class="err">等于零</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">prin</span><span class="p">(</span><span class="err">等于</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="err">大于零</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>if判断语句可结合elif用来替换‘case’或‘switch’语句</p>
+<h3 id="for">for</h3>
+<p>常用遍历</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">a</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+    <span class="k">print</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> 
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="while">while</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">value</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s1">&#39;Please input a number:&#39;</span> <span class="p">)</span>
+<span class="k">while</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s1">&#39;Right&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s1">&#39;Please input again&#39;</span>
+
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="breakcontinue和else">break、continue和else</h3>
+<blockquote>
+<p>从C语言引用过来，用在控制语句中跳出或延续</p>
+</blockquote>
+<h3 id="pass">pass</h3>
+<p>表示什么都不做，可用来构建最小类。（另外也可以用来当作占位符）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">myclass</span><span class="p">:</span>
+    <span class="k">pass</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="函数">函数</h2>
+<p><em>函数嘛，基本编程语言都离不开它。函数能提高应用的模块性，和单一功能功能代码的重复利用率。我们在程序中很多语法本就个内建的函数，比如print()。</em></p>
+<h3 id="内建函数">内建函数</h3>
+<p>Python内置了很多有用的函数，我们可以直接调用。</p>
+<h3 id="定义函数">定义函数</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">printNum</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="s2">&#34;&#34;&#34;
+</span><span class="s2">    这是函数
+</span><span class="s2">    使用print.__doc__可以将其打印出
+</span><span class="s2">    &#34;&#34;&#34;</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="装饰器">装饰器</h3>
+<h3 id="递归函数">递归函数</h3>
+<p>在函数内部，可以调用其他函数。如果一个函数在内部调用自身本身，这个函数就是递归函数。</p>
+<blockquote>
+<p>通过定义的函数，我们将printNum函数定义为只打整数的print。</p>
+</blockquote>
+<h4 id="闭包">闭包</h4>
+<h3 id="匿名函数">匿名函数</h3>
+<p>所谓匿名，意即不再使用 def 语句这样标准的形式定义一个函数</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">:</span><span class="n">x</span><span class="o">*</span><span class="n">y</span>
+<span class="k">print</span> <span class="n">f</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="c1">#结果为4*5</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="装饰器-1">装饰器</h3>
+<h2 id="错误和异常">错误和异常</h2>
+<h3 id="错误">错误</h3>
+<p>我们说的错误指的是语法错误，也可以称作解析错误</p>
+<h3 id="异常">异常</h3>
+<p>指的是在语法正常的情况下，表达式引发的错误。程序并不会因为其而崩溃，而是将这种异常的以报错的方式显示出来。既然我们知道了有异常一说（而且很多时候是无法避免的），那我们就该来处理这些异常。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">while</span> <span class="n">Ture</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&#34;Please enter a number&#34;</span><span class="p">))</span>
+        <span class="k">break</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&#34;That was no vaild number!Please try again&#34;</span><span class="p">)</span>    
+</code></pre></td></tr></table>
+</div>
+</div><p><em>基本语法如上</em></p>
+<blockquote>
+<p>我们需要输入一个整数，但是如果你要输入的不是整数会怎样？这时候就会提示错误（异常），而且提示如上就是ValueError。这里我们自行定义异常的提示结果。</p>
+</blockquote>
+<h3 id="异常处理">异常处理</h3>
+<p><em>由此我们就可以明白异常产生的一个原因，并且可以自行定义异常产生后处理。</em></p>
+<blockquote>
+<p>那如果我们不知道程序会出现怎样的错误的该如何？这时就可以直接使用expect来将其异常归纳起来统一处理。在expect下加入else则表示没有异常就执行else后的程序块。</p>
+</blockquote>
+<h3 id="抛出异常">抛出异常</h3>
+<blockquote>
+<p>为什么我们要抛出异常呢？</p>
+</blockquote>
+<p>因为错误是class，捕获一个错误就是捕获到该class的一个实例。因此，错误并不是凭空产生的，而是有意创建并抛出的。Python的内置函数会抛出很多类型的错误，我们自己编写的函数也可以抛出错误。</p>
+<h3 id="自定义异常">自定义异常</h3>
+<blockquote>
+<p>异常出现我们可以做自定义，通过创建新的异常except Error as e：来命名自己的异常。</p>
+</blockquote>
+<h3 id="异常清理行为">异常清理行为</h3>
+<blockquote>
+<p>最后来说的是异常的清理行为。假如我们在open了文件后出现异常导致没有close上文件，这样会引发一些不必要的问题。那么我们可以用try&hellip;finally来保证finally后的程序块必须执行，当然还有一种方法用with来代替try这是预定义的清理行为。</p>
+</blockquote>
+<h2 id="类">类</h2>
+<p>这是一个较麻烦的问题，但对于学过面向对象编程的人来说就较容易理解了。</p>
+<h2 id="附录">附录</h2>
+<h3 id="编码风格">编码风格</h3>
+<blockquote>
+<p>关于缩进符官网介绍的有三种，一个制表符、两个空格或者四个空格。注意这三种风格绝不能混用</p>
+</blockquote>
+<p><strong>当然大多数人建议的尽量使用其中一种风格，并且长期使用它。而我的建议是我们就只把四个空格当作缩进符，因为Tab键存在平台之间的差异，虽然有时使用四个空格很是麻烦（那是因为你没有用到一款好的文本编辑器）。</strong></p>
+<h3 id="命名规则">命名规则</h3>
+<p><em>Python命名规则和大多数编程语言一样包含着数字、字母、下划线。（同样的首字符不能为数字）</em></p>
+<ul>
+<li>这里的命名规则并没有强制要求，你也可以灵活使用。
+（比如整个项目中并没有使用多少全局变量的时候你就可以将其全部大写）</li>
+</ul>
+<blockquote>
+<p>关于变量
+全使用小写字母，碰到多个单词合并成一个变量的时候可以使用_分隔</p>
+</blockquote>
+<blockquote>
+<p>关于函数
+尽量小写，碰到多个单词合并的时候其后接单词使用大写</p>
+</blockquote>
+<blockquote>
+<p>关于类
+首字母大写，多个单词合成时同函数的命名规则</p>
+</blockquote>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">MZZZ</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2020-04-26
+        
+    </span>
+  </p>
+  <p class="copyright-item">
+      <span class="item-title">原始文档</span>
+      <span class="item-content"><a class="link-to-markdown" href="https://mzqk.github.io/post/learningpython/index.md" target="_blank">查看本文 Markdown 版本 »</a></span>
+    </p>
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/path/to/your/wechat-qr-code.png">
+        <span>微信打赏</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/path/to/your/alipay-qr-code.png">
+        <span>支付宝打赏</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/python/">Python</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/fhs/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">FHS</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/aixofsvn/">
+            <span class="next-text nav-default">AIX 安装 SVN</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="zqk_mz@163.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/MZqk" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+  <a href="https://mzqk.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2014 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">MZZZ</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.cddea96674a99fd8cea50d36fb19d9c91f497feea4af5ce4596afd2dbaab9202.js"></script>
+
+
+
+<script id="baidu_push">
+  (function(){
+    if (window.location.hostname === 'localhost') return;
+    var bp = document.createElement('script'); bp.async = true;
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  })();
+</script>
+
+
+
+
+</body>
+</html>
