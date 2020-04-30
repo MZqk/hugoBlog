@@ -28,7 +28,7 @@ deploy:
   local-dir: public
   target-branch: master
   github-token: $GITHUB_TOKEN
-  fqdn: mzqk.github.io
+  # fqdn: mzqk.github.io
   keep-history: true
   on:
     branch: hugo
