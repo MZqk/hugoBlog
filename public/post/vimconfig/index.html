@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Vim 自定插件 - MZZZ</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="MZZZ" /><meta name="description" content="" />
+
+
+<meta name="baidu-site-verification" content="ffpGMEgJqL" />
+<meta name="google-site-verification" content="000787356434342490116:pqinoduyuiu" />
+
+
+<meta name="generator" content="Hugo 0.69.1 with theme even" />
+
+
+<link rel="canonical" href="https://mzqk.github.io//post/vimconfig/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Vim 自定插件" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mzqk.github.io//post/vimconfig/" />
+<meta property="article:published_time" content="2017-06-14T15:35:31+08:00" />
+<meta property="article:modified_time" content="2020-04-26T15:35:31+08:00" />
+<meta itemprop="name" content="Vim 自定插件">
+<meta itemprop="description" content="">
+<meta itemprop="datePublished" content="2017-06-14T15:35:31&#43;08:00" />
+<meta itemprop="dateModified" content="2020-04-26T15:35:31&#43;08:00" />
+<meta itemprop="wordCount" content="1919">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Vim 自定插件"/>
+<meta name="twitter:description" content=""/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">MZZZ</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/search/">
+        <li class="mobile-menu-item">搜索</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">MZZZ</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/search/">搜索</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Vim 自定插件</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2017-06-14 </span>
+        <div class="post-category">
+            <a href="/categories/linux/"> Linux </a>
+            </div>
+          <span class="more-meta"> 约 1919 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#vundle-插件管理">Vundle 插件管理</a>
+      <ul>
+        <li><a href="#添加至vimrc">添加至vimrc</a></li>
+      </ul>
+    </li>
+    <li><a href="#nerdtree-目录树">NerdTree 目录树</a>
+      <ul>
+        <li><a href="#使用说明">使用说明</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h1 id="插件">插件</h1>
+<h2 id="vundle-插件管理">Vundle 插件管理</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/nerdtree
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="添加至vimrc">添加至vimrc</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">&#34;Vundle插件管理
+set nocompatible              &#34; 去除VI一致性,必须要添加
+filetype off                  &#34; 必须要添加
+
+&#34; 设置包括vundle和初始化相关的runtime path
+set rtp+=~/.vim/bundle/Vundle.vim
+
+call vundle#begin()
+&#34; 让vundle管理插件版本
+Plugin &#39;VundleVim/Vundle.vim&#39;
+&#34;
+&#34;
+&#34;
+&#34;
+&#34;
+&#34;
+&#34;
+&#34;所有插件需要在下面这行上面
+&#34;安装插件的方式可以使用本地、git及网络安装
+&#34;示例
+&#34;Plugin &#39;git://git.wincent.com/command-t.git&#39;
+&#34;Plugin &#39;file:///home/gmarik/path/to/plugin&#39;
+&#34;Plugin &#39;tpope/vim-fugitive&#39;
+&#34;重名插件
+&#34;Plugin &#39;rstacruz/sparkup&#39;, {&#39;rtp&#39;: &#39;vim/&#39;}
+
+call vundle#end()            &#34; required
+
+filetype plugin indent on    &#34; required
+&#34; 忽视插件改变缩进,可以使用以下替代:
+&#34;filetype plugin on
+
+&#34; 常用的命令
+&#34; :PluginList       - 列出所有已配置的插件
+&#34; :PluginInstall    - 安装插件,追加 `!` 用以更新或使用 :PluginUpdate 
+&#34; :PluginSearch foo - 搜索 foo ; 追加 `!` 清除本地缓存
+&#34; :PluginClean      - 除未使用插件,需要确认; 追加 `!` 自动批准移除未使用插件
+
+&#34; :h vundle 查看帮助
+&#34; 将你自己对非插件片段放在这行之后
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="nerdtree-目录树">NerdTree 目录树</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">&#34; 设置NerdTree
+&#34;Plugin &#39;scrooloose/nerdtree&#39; 
+let NERDTreeWinPos=&#39;left&#39;
+let NERDTreeWinSize=30
+map &lt;F3&gt; :NERDTreeToggle&lt;CR&gt;
+&#34;默认开启NERDTree
+&#34;autocmd VimEnter * NERDTree
+&#34;当打开 NERDTree 窗口时，自动显示 Bookmarks
+let NERDTreeShowBookmarks=1
+&#34; 是否显示隐藏文件
+let NERDTreeShowHidden=1
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="使用说明">使用说明</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">?: 快速帮助文档
+o: 打开一个目录或者打开文件，创建的是buffer，也可以用来打开书签
+go: 打开一个文件，但是光标仍然留在NERDTree，创建的是buffer
+t: 打开一个文件，创建的是Tab，对书签同样生效
+T: 打开一个文件，但是光标仍然留在NERDTree，创建的是Tab，对书签同样生效
+i: 水平分割创建文件的窗口，创建的是buffer
+gi: 水平分割创建文件的窗口，但是光标仍然留在NERDTree
+s: 垂直分割创建文件的窗口，创建的是buffer
+gs: 和gi，go类似
+x: 收起当前打开的目录
+X: 收起所有打开的目录
+e: 以文件管理的方式打开选中的目录
+D: 删除书签
+P: 大写，跳转到当前根路径
+p: 小写，跳转到光标所在的上一级路径
+K: 跳转到第一个子路径
+J: 跳转到最后一个子路径
+&lt;C-j&gt;和&lt;C-k&gt;: 在同级目录和文件间移动，忽略子目录和子文件
+C: 将根路径设置为光标所在的目录
+u: 设置上级目录为根路径
+U: 设置上级目录为跟路径，但是维持原来目录打开的状态
+r: 刷新光标所在的目录
+R: 刷新当前根路径
+I: 显示或者不显示隐藏文件
+f: 打开和关闭文件过滤器
+q: 关闭NERDTree
+A: 全屏显示NERDTree，或者关闭全屏
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="vimrc">.vimrc</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">set fileencodings=utf-8,gbk
+set termencoding=utf-8
+set encoding=utf-8
+
+syntax on           &#34;语法高亮
+set nocompatible    &#34;关闭vi兼容模式
+set nu              &#34;显示行号
+set ruler           &#34;打开状态栏标尺
+set softtabstop=4   &#34;退格键删除4个空格
+set tabstop=4       &#34;设置tab长度为 4
+set nobackup        &#34;覆盖文件不备份
+set autochdir       &#34;自动切换当前目录
+set hlsearch        &#34;搜索高亮
+set magic           &#34;设置魔术
+set smartindent     &#34;自动缩行
+set backspace=indent,eol,start
+set laststatus=2    &#34;显示状态栏
+set bg=dark &#34;暗色背景
+
+&#34;history存储容量
+set history=2000
+
+&#34;检测文件类型，采用不同的缩进格式
+filetype on
+filetype indent on
+set autoindent
+
+&#34;备份设置
+&#34;set backup
+&#34;set backupext=.bak
+&#34;set backupdir=~/.bak/
+
+&#34;突出显示
+set cursorcolumn
+set cursorline
+
+&#34;设置退出显示的内容
+set t_ti= t_te=
+
+&#34;显示状态栏内容
+set ruler
+set showcmd
+set showmode
+
+&#34;搜索显示
+set showmatch
+set hlsearch
+set ignorecase
+
+&#34;取消方向键
+&#34;map &lt;Left&gt; &lt;Nop&gt;
+&#34;map &lt;Right&gt; &lt;Nop&gt;
+&#34;map &lt;Up&gt; &lt;Nop&gt;
+&#34;map &lt;Down&gt; &lt;Nop&gt;
+
+&#34;python文件设置
+autocmd FileType python set tabstop=4 shiftwidth=4 expandtab ai
+func! DeleteTrailingWS()
+        exe &#34;normal mz&#34;
+        %s/\s\+$//ge
+        exe &#34;normal `z&#34;
+endfunc
+autocmd BufWrite *.py :call DeleteTrailingWS()
+
+&#34;脚本文件加入文件头
+autocmd BufNewFile *.sh,*.py `exec` &#34;:call SetTitle()&#34;
+func SetTitle()
+    if &amp;filetype == &#39;python&#39;
+        call setline(1, &#34;\#!/usr/bin/env python&#34;) 
+        call setline(2, &#34;\# -*- encoding:utf-8 -*-&#34;) 
+    endif
+    if &amp;filetype == &#39;sh&#39;
+        call setline(1, &#34;\#!/usr/bin/sh&#34;) 
+    endif
+endfunc
+
+&#34;&lt;F2&gt;开关行号
+function! HideNumber()
+        if(&amp;relativenumber == &amp;number)
+                set relativenumber! number!
+        elseif(&amp;number)
+                set number!
+        else
+                set relativenumber!
+        endif
+                set number?
+endfunc
+nnoremap &lt;F2&gt; :call HideNumber()&lt;CR&gt;
+
+&#34;===========================================================&#34;
+&#34; 设置pydiction
+&#34;===========================================================&#34;
+let g:pydiction_location=&#39;~/.vim/bundle/pydiction/complete-dict&#39; 
+&#34;菜单高度
+let g:pydiction_menu_height = 3
+
+&#34;===========================================================&#34;
+&#34; 设置NerdTree
+&#34;===========================================================&#34;
+&#34;设置目录树位置
+let NERDTreeWinPos=&#39;left&#39;
+let NERDTreeWinSize=30
+&#34;&lt;F3&gt;开关目录树
+map &lt;F3&gt; :NERDTreeToggle&lt;CR&gt;
+&#34;默认开启NERDTree
+&#34;autocmd VimEnter * NERDTree
+&#34;当打开 NERDTree 窗口时，自动显示 Bookmarks
+let NERDTreeShowBookmarks=1
+&#34; 是否显示隐藏文件
+let NERDTreeShowHidden=1
+
+&#34;设置&lt;F4&gt;保存文件
+map &lt;F4&gt; :&lt;ESC&gt;:w&lt;CR&gt;
+
+
+&#34;===========================================================&#34;
+&#34;Vundle插件管理
+&#34;===========================================================&#34;
+set nocompatible              &#34; 去除VI一致性,必须要添加
+filetype off                  &#34; 必须要添加
+
+&#34; 设置包括vundle和初始化相关的runtime path
+set rtp+=~/.vim/bundle/Vundle.vim
+
+call vundle#begin()
+&#34; 让vundle管理插件版本
+Plugin &#39;VundleVim/Vundle.vim&#39;
+Plugin &#39;scrooloose/nerdtree&#39;
+Plugin &#39;rkulla/pydiction&#39;
+&#34;
+&#34;
+&#34;
+&#34;
+&#34;
+&#34;
+&#34;
+&#34;所有插件需要在下面这行上面
+&#34;安装插件的方式可以使用本地、git及网络安装
+&#34;示例
+&#34;Plugin &#39;git://git.wincent.com/command-t.git&#39;
+&#34;Plugin &#39;file:///home/gmarik/path/to/plugin&#39;
+&#34;Plugin &#39;tpope/vim-fugitive&#39;
+&#34;重名插件
+&#34;Plugin &#39;rstacruz/sparkup&#39;, {&#39;rtp&#39;: &#39;vim/&#39;}
+
+call vundle#end()            &#34; required
+
+filetype plugin indent on    &#34; required
+&#34; 忽视插件改变缩进,可以使用以下替代:
+&#34;filetype plugin on
+</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">MZZZ</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2020-04-26
+        
+    </span>
+  </p>
+  <p class="copyright-item">
+      <span class="item-title">原始文档</span>
+      <span class="item-content"><a class="link-to-markdown" href="https://mzqk.github.io//post/vimconfig/index.md" target="_blank">查看本文 Markdown 版本 »</a></span>
+    </p>
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/path/to/your/wechat-qr-code.png">
+        <span>微信打赏</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/path/to/your/alipay-qr-code.png">
+        <span>支付宝打赏</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/windowsrename/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">WindowsRename</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/linuxbywork/">
+            <span class="next-text nav-default">使用 Linux 远程连接 Windows</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="zqk_mz@163.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/MZqk" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+  <a href="https://mzqk.github.io//index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2014 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">MZZZ</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.cddea96674a99fd8cea50d36fb19d9c91f497feea4af5ce4596afd2dbaab9202.js"></script>
+
+
+
+<script id="baidu_push">
+  (function(){
+    if (window.location.hostname === 'localhost') return;
+    var bp = document.createElement('script'); bp.async = true;
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  })();
+</script>
+
+
+
+
+</body>
+</html>
